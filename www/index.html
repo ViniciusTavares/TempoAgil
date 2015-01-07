@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/toastr.min.css" rel="stylesheet" />
+    <link href="css/theme.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+      <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+</head>
+<body ng-app="app" animation="slide-left-right-ios7">
+
+    <!-- <ion-nav-bar class="bar-dark"></ion-nav-bar> -->
+        
+    <ion-tabs class="tabs-positive">
+    <ion-tab icon="ion-home" ui-sref="home">
+      <ion-nav-view name="home"></ion-nav-view>
+    </ion-tab>
+    <ion-tab icon="ion-information-circled" ui-sref="about">
+      <ion-nav-view name="about"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+
+    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script src="lib/modernizr/modernizr-latest.js"></script>
+    <script src="lib/toastr/toastr.min.js"></script>
+    <script src="lib/underscore/underscore-min.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+
+    <!-- app -->
+    <script src="app/app.js"></script>
+    <script src="app/config/config.route.js"></script>
+
+    <!-- controllers -->
+    <script src="app/controllers/weatherIndexController.js"></script>
+    <script src="app/controllers/aboutController.js"></script>
+
+    <!-- services -->
+     <script src="app/services/weatherService.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+</body>
+</html>
