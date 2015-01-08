@@ -24,6 +24,4 @@ function weatherService($http, $q) {
 			deferred.reject(response);
 		});
 	}
-
-
 }

@@ -6,7 +6,8 @@
         'ngAnimate',
         'ngSanitize',
         'ngRoute',
-        'ionic'
+        'ionic',
+        'common'
         ]);
 
     app.run(['$rootScope', '$route', '$location', '$ionicPlatform',
