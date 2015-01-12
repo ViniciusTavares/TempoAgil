@@ -1,0 +1,45 @@
+/*Default styles*/
+
+/*inputs */
+
+/*paddings*/
+
+/*margins*/
+
+/*align*/
+
+.centralizeContent { 
+	margin: 0 auto;
+}
+
+.centralizeSection { 
+	display: table;
+	margin: 0 auto;
+}
+
+.text-center { 
+	text-align: center; 
+}
+
+.text-right { 
+	text-align: right;
+}
+
+.text-left { 
+	text-align: left;
+}
+
+.pull-left { 
+	float: left;
+}
+
+.pull-right {
+	float: right: ;
+};
+
+
+/*sizes*/
+
+.font-size-small { 
+	font-size: 11px;
+}

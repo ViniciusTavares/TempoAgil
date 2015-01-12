@@ -8,49 +8,55 @@ app.factory(serviceId, ['$http', '$q', translatorService]);
 function translatorService($http, $q) { 
 	return { 
 		translateDayOfWeek : translateDayOfWeek,
-		translateDayDescription : translateDayDescription
+		getDescriptionOfDayCondition : getDescriptionOfDayCondition
 	}
 
 	function translateDayOfWeek(day) {
 		switch(day.toLowerCase()) { 
 			case('mon'): 
-				return 'Segunda';  
+			return 'Segunda';  
 			break;
 			case('tue'): 
-				return 'Terça';  
+			return 'Terça';  
 			break;
 			case('wed'): 
-				return 'Quarta';  
+			return 'Quarta';  
 			break;
 			case('thu'): 
-				return 'Quinta';  
+			return 'Quinta';  
 			break;
 			case('fri'): 
-				return 'Sexta';  
+			return 'Sexta';  
 			break;
 			case('sat'): 
-				return 'Sábado';  
+			return 'Sábado';  
 			break;
 			case('sun'): 
-				return 'Domingo';  
+			return 'Domingo';  
 			break;
 		}
 	}
 
-	function translateDayDescription(description) { 
+	function getDescriptionOfDayCondition(description) { 
 		switch(description.toLowerCase()) { 
 			case('thunderstorms'): 
-				return 'Segunda';  
+			return 'Trovoadas';  
 			break;
 			case('mostly sunny'): 
-				return 'Ensolarado';  
+			return 'Ensolarado';  
 			break;
 			case('isolated thunderstorms'): 
-				return 'Trovoadas';  
+			return 'Trovoadas';  
 			break;
 			case('thunderstorms early'): 
-				return 'Ensolorado'
-			break;			
+			return 'Trovoadas de manhã'
+			break;
+			case('pm thunderstorms'): 
+			return 'Trovoadas a Noite'
+			case('partly cloudy'):
+			return 'Céu limpo'
+			break;
+
 		}
 	}
 }

@@ -13,6 +13,9 @@
 
 			$scope.currentForecast = $scope.forecasts[0];
 			$scope.currentForecast.temp = common.convertFahrenheitToCelsius(response.data.query.results.channel.item.condition.temp);
+			$scope.heatIndex = common.calculateHeatIndex( $scope.currentForecast.temp, response.data.query.results.channel.atmosphere.humidity)
+			$scope.currentForecast.condition = translatorService.getDescriptionOfDayCondition(response.data.query.results.channel.item.condition.text); 
+			
 			processForecasts(); 
 		}); 
 
@@ -20,9 +23,14 @@
 			$scope.forecasts.forEach(function(item){ 
 				item.high = common.convertFahrenheitToCelsius(item.high);
 				item.low = common.convertFahrenheitToCelsius(item.low);
-				item.day = translatorService.translateDayOfWeek(item.day); 
-				item.text = translatorService.translateDayDescription(item.text);
+				item.dayDescription = translatorService.translateDayOfWeek(item.day);
+				item.day = getForecastDay(item.date);
+				item.text = translatorService.getDescriptionOfDayCondition(item.text);
 			});
+		}
+
+		function getForecastDay(date) { 
+			return date.substring(0,date.indexOf(' '));
 		}
 	} 
 })();
