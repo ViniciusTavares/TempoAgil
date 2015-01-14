@@ -7,6 +7,19 @@ h2 { font-size: 30px; }
 
 h2 { font-size: 50px; }
 
+.thunderstorms,
+.sunny,
+.thunderstorms-am,
+.thunderstorm-pm,
+.partly-cloudy {
+	text-indent: -9999px;
+	width: 48px;height: 48px;
+
+	display: inline-block;
+}
+
+
+
 .thunderstorms { background: url(); }
 
 .sunny { background: url(../imgs/sunny.png); }
