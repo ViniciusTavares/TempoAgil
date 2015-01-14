@@ -1,13 +1,51 @@
 /*Default styles*/
+body { color: #fff; }
 
+h1, h2, h3, h4, h5 { color: #fff;font-family: 'Fjalla One', sans-serif; }
+
+h2 { font-size: 30px; }
+
+h2 { font-size: 50px; }
+
+.thunderstorms,
+.sunny,
+.thunderstorms-am,
+.thunderstorm-pm,
+.partly-cloudy {
+	text-indent: -9999px;
+	width: 48px;height: 48px;
+
+	display: inline-block;
+}
+
+
+
+.thunderstorms { background: url(); }
+
+.sunny { background: url(../imgs/sunny.png); }
+
+.thunderstorms-am { background: url(); }
+
+.thunderstorm-pm { background: url(); }
+
+.partly-cloudy { background: url(); }
+
+/*Override ionic styles*/
+.pane, .view {
+	background: url(../imgs/bg-sun.png);
+	background-size: cover;
+}
+
+.padding { padding: 35px 10px; }
 /*inputs */
+
+/*buttons*/
 
 /*paddings*/
 
 /*margins*/
 
 /*align*/
-
 .centralizeContent { 
 	margin: 0 auto;
 }
@@ -15,18 +53,6 @@
 .centralizeSection { 
 	display: table;
 	margin: 0 auto;
-}
-
-.text-center { 
-	text-align: center; 
-}
-
-.text-right { 
-	text-align: right;
-}
-
-.text-left { 
-	text-align: left;
 }
 
 .pull-left { 
@@ -39,7 +65,6 @@
 
 
 /*sizes*/
-
 .font-size-small { 
 	font-size: 11px;
 }

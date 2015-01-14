@@ -1,14 +1,13 @@
  <ion-view title="Home">
  <ion-content padding="true">
 
- <section name="weatherIndexContent" class="" >  
+ <section name="weatherIndexContent" class="">  
 
- 	<div name="currentForecastMain" class="text-center">
- 		<h2>Temperatura atual de São Paulo: {{currentForecast.temp}}</h2>
+ 	<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box">
+ 		<h1>São Paulo</h1>
+ 		<h2>{{currentForecast.temp}}º <span class="sunny">&nbsp;</span></h2>
  		<h4>{{currentForecast.condition | translateDayCondition}}</h4>
- 		<h5>
- 			Maxima: {{currentForecast.high | convertToCelsius}}º | Mínima: {{currentForecast.low | convertToCelsius}}º | Sensação térmica {{heatIndex }}º
- 		</h5>
+ 		<h5> {{currentForecast.high | convertToCelsius }}º / {{currentForecast.low | convertToCelsius}}º - Sensação térmica, {{heatIndex}}º </h5>
  	</div> 
 
  	<div class="row text-center">
@@ -38,9 +37,10 @@
 
  	<div class="row text-center" ng-show="showNextForecasts">
  		<div class="col-25" ng-repeat="forecast in forecasts">  		
+
  			<p>{{forecast.date }} {{forecast.day | translateDayName}}</p>
  			<p class="{{forecast.text | getClassIconOfDayCondition}}">T</p>
- 			<p>{{forecast.high | convertToCelsius}}º | {{forecast.low | convertToCelsius}}º</p> 			
+ 			<p>{{forecast.high | convertToCelsius}}º | {{forecast.low | convertToCelsius}}º</p> 
  		</div>
  	</div>
 
