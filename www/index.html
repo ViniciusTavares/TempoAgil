@@ -23,19 +23,6 @@
 </head>
 <body ng-app="app" animation="slide-left-right-ios7">
 
-<ion-side-menus>
-  <!-- Center content -->
-  <ion-side-menu-content ng-controller="weatherIndexController">
-  </ion-side-menu-content>
-
-  <!-- Left menu -->
-  <ion-side-menu side="left">
-  </ion-side-menu>
-
-  <!-- Right menu -->
-  <ion-side-menu side="right"> 
-  </ion-side-menu>
-</ion-side-menus>
 
     <!-- <ion-nav-bar class="bar-dark"></ion-nav-bar> -->
 
@@ -63,7 +50,7 @@
 <script src="app/config/config.route.js"></script>
 <script src="app/common/common.js"></script>
 <script src="app/common/translator.js"></script>
-<script src="app/filters/skipCurrentForecast.js"></script>
+<script src="app/filters/forecastFilter.js"></script>
 
 <!-- controllers -->
 <script src="app/controllers/sideMenuController.js"></script>

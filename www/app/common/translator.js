@@ -14,25 +14,25 @@ function translatorService($http, $q) {
 	function translateDayOfWeek(day) {
 		switch(day.toLowerCase()) { 
 			case('mon'): 
-			return 'Segunda';  
+			return 'Seg';  
 			break;
 			case('tue'): 
-			return 'Terça';  
+			return 'Ter'; 
 			break;
 			case('wed'): 
-			return 'Quarta';  
+			return 'Qua';  
 			break;
 			case('thu'): 
-			return 'Quinta';  
+			return 'Qui';  
 			break;
 			case('fri'): 
-			return 'Sexta';  
+			return 'Sex';  
 			break;
 			case('sat'): 
-			return 'Sábado';  
+			return 'Sab';  
 			break;
 			case('sun'): 
-			return 'Domingo';  
+			return 'Dom';  
 			break;
 		}
 	}
@@ -55,6 +55,28 @@ function translatorService($http, $q) {
 			return 'Trovoadas a Noite'
 			case('partly cloudy'):
 			return 'Céu limpo'
+			break;
+		}
+	}
+
+	function getClassIconOfDayCondition(description) { 
+		switch(description.toLowerCase()) { 
+			case('thunderstorms'): 
+			return 'thunderstorms';  
+			break;
+			case('mostly sunny'): 
+			return 'sunny';  
+			break;
+			case('isolated thunderstorms'): 
+			return 'thunderstorms';  
+			break;
+			case('thunderstorms early'): 
+			return 'thunderstorms-am'
+			break;
+			case('pm thunderstorms'): 
+			return 'thunderstorm-pm'
+			case('partly cloudy'):
+			return 'partly-cloudy'
 			break;
 
 		}
