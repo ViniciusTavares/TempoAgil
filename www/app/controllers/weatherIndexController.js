@@ -14,18 +14,14 @@
 			$scope.currentForecast = $scope.forecasts[0];
 			$scope.currentForecast.temp = common.convertFahrenheitToCelsius(response.data.query.results.channel.item.condition.temp);
 			$scope.heatIndex = common.calculateHeatIndex( $scope.currentForecast.temp, response.data.query.results.channel.atmosphere.humidity)
-			$scope.currentForecast.condition = translatorService.getDescriptionOfDayCondition(response.data.query.results.channel.item.condition.text); 
-			
+			$scope.currentForecast.condition = response.data.query.results.channel.item.condition.text; 
+			$scope.showNextForecasts = false; 
 			processForecasts(); 
 		}); 
 
 		function processForecasts() { 
-			$scope.forecasts.forEach(function(item){ 
-				item.high = common.convertFahrenheitToCelsius(item.high);
-				item.low = common.convertFahrenheitToCelsius(item.low);
-				item.dayDescription = translatorService.translateDayOfWeek(item.day);
-				item.day = getForecastDay(item.date);
-				item.text = translatorService.getDescriptionOfDayCondition(item.text);
+			$scope.forecasts.forEach(function(item){				
+				item.date = getForecastDay(item.date);				
 			});
 		}
 

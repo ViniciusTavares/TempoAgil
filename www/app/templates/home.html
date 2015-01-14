@@ -5,15 +5,17 @@
 
  	<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box">
  		<h1>São Paulo</h1>
- 		
  		<h2>{{currentForecast.temp}}º <span class="sunny">&nbsp;</span></h2>
- 		
- 		<h4>{{currentForecast.condition}}</h4>
-
- 		<h5> {{currentForecast.high}}º / {{currentForecast.low}}º - Sensação térmica, {{heatIndex}}º </h5>
+ 		<h4>{{currentForecast.condition | translateDayCondition}}</h4>
+ 		<h5> {{currentForecast.high | convertToCelsius }}º / {{currentForecast.low | convertToCelsius}}º - Sensação térmica, {{heatIndex}}º </h5>
  	</div> 
 
- 	<div name="currentForecastDetails" > 
+ 	<div class="row text-center">
+ 		<button ng-click="showNextForecasts = false">Hoje</button>
+ 		<button ng-click="showNextForecasts = true">Próximas</button>
+ 	</div>
+
+ 	<div name="currentForecastDetails" ng-show="!showNextForecasts"> 
  		<div class="row text-center ">
  			<div class="col-50">
  				<span>Manhã</span>
@@ -24,22 +26,24 @@
  		</div>
  		<div class="row text-center">
  			<div class="col-50">
- 				<span>{{currentForecast.high}}º</span>
+ 				<span>{{currentForecast.high | convertToCelsius}}º</span>
  			</div>
  			<div class="col-50">
- 				<span>{{currentForecast.low}}º</span>
+ 				<span>{{currentForecast.low | convertToCelsius}}º</span>
  			</div>
  		</div>
+ 	</div>
 
- 	</ion-tab>
 
- 	<div class="row text-center">
+ 	<div class="row text-center" ng-show="showNextForecasts">
  		<div class="col-25" ng-repeat="forecast in forecasts">  		
- 			<p>{{forecast.day}} {{forecast.dayDescription}}</p>
- 			<p>{{forecast.text}}</p>
- 			<p>{{forecast.high}}º | {{forecast.low}}º</p>
+
+ 			<p>{{forecast.date }} {{forecast.day | translateDayName}}</p>
+ 			<p class="{{forecast.text | getClassIconOfDayCondition}}">T</p>
+ 			<p>{{forecast.high | convertToCelsius}}º | {{forecast.low | convertToCelsius}}º</p> 
  		</div>
  	</div>
+
  </section>
 
 </ion-content>
