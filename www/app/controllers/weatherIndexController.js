@@ -12,10 +12,11 @@
 			$scope.forecasts.splice(0, 1);
 
 			$scope.currentForecast = $scope.forecasts[0];
+
 			$scope.currentForecast.temp = common.convertFahrenheitToCelsius(response.data.query.results.channel.item.condition.temp);
 			$scope.heatIndex = common.calculateHeatIndex( $scope.currentForecast.temp, response.data.query.results.channel.atmosphere.humidity)
 			$scope.currentForecast.condition = response.data.query.results.channel.item.condition.text; 
-			$scope.showNextForecasts = false; 
+			$scope.showNextForecasts = false;
 			processForecasts(); 
 		}); 
 

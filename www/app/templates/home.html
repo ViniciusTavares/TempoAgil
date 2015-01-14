@@ -15,8 +15,8 @@
  	</div> 
 
  	<div class="row text-center cicle-button centralizeContent">
- 		<button ng-click="showNextForecasts = false">Hoje</button>
- 		<button ng-click="showNextForecasts = true" class="active">Dias</button>
+ 		<button ng-class="{active: !showNextForecasts}" ng-click="showNextForecasts = false">Hoje</button>
+ 		<button ng-class="{active: showNextForecasts}" ng-click="showNextForecasts = true">Dias</button>
  	</div>
 
  	<div name="currentForecastDetails" ng-show="!showNextForecasts"> 
@@ -43,7 +43,7 @@
  		<div class="col-25" ng-repeat="forecast in forecasts">  		
 
  			<p>{{forecast.date }} {{forecast.day | translateDayName}}</p>
- 			<p class="{{forecast.text | getClassIconOfDayCondition}}">T</p>
+ 			<p class="{{forecast.text | getClassIconOfDayCondition}}"></p>
  			<p>{{forecast.high | convertToCelsius}}º | {{forecast.low | convertToCelsius}}º</p> 
  		</div>
  	</div>

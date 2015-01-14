@@ -56,7 +56,7 @@ button.active {
 	-webkit-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
 	box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
-	position: absolute;right: 90px;
+	/*position: absolute;right: 90px;*/
 	z-index: 2;
 	background-color: #007FFF;
 }

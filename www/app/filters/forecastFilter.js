@@ -57,6 +57,9 @@ app.filter('translateDayCondition', function() {
 				case('mostly cloudy'):
 				return 'Parcialmente Nublado'
 				break; 
+				case('light rain with thunder'): 
+				return 'Garoa com chuva'
+				break;
 			}
 		}
 
@@ -87,6 +90,9 @@ app.filter('getClassIconOfDayCondition', function() {
 				return 'thunderstorm-pm'
 				case('partly cloudy'):
 				return 'partly-cloudy'
+				break;
+				case('light rain with thunder'): 
+				return 'rain-with-thunder'
 				break;
 			}
 		}
