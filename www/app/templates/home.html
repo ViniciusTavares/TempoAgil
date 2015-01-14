@@ -1,14 +1,16 @@
  <ion-view title="Home">
  <ion-content padding="true">
 
- <section name="weatherIndexContent" class="" >  
+ <section name="weatherIndexContent" class="">  
 
- 	<div name="currentForecastMain" class="text-center">
- 		<h2>Temperatura atual de São Paulo: {{currentForecast.temp}}</h2>
+ 	<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box">
+ 		<h1>São Paulo</h1>
+ 		
+ 		<h2>{{currentForecast.temp}} <span><img src="dasdasd" alt="dadsa"></span></h2>
+ 		
  		<h4>{{currentForecast.condition}}</h4>
- 		<h5>
- 			Maxima: {{currentForecast.high}}º | Mínima: {{currentForecast.low}}º | Sensação térmica {{heatIndex}}º
- 		</h5>
+
+ 		<h5> {{currentForecast.high}}º / {{currentForecast.low}}º - Sensação térmica, {{heatIndex}}º </h5>
  	</div> 
 
  	<div name="currentForecastDetails" > 
@@ -36,7 +38,6 @@
  			<p>{{forecast.day}} {{forecast.dayDescription}}</p>
  			<p>{{forecast.text}}</p>
  			<p>{{forecast.high}}º | {{forecast.low}}º</p>
- 			
  		</div>
  	</div>
  </section>
