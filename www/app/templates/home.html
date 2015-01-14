@@ -3,16 +3,20 @@
 
  <section name="weatherIndexContent" class="">  
 
- 	<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box">
+ 	<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box margin-bottom-50">
  		<h1>São Paulo</h1>
- 		<h2>{{currentForecast.temp}}º <span class="sunny">&nbsp;</span></h2>
- 		<h4 style="font-family: HelveticaNeue-Light">{{currentForecast.condition | translateDayCondition}}</h4>
+
+ 		
+ 		<h2>{{currentForecast.temp}}º C</h2>
+ 		
+ 		<h4>{{currentForecast.condition | translateDayCondition}}</h4>
+ 		
  		<h5> {{currentForecast.high | convertToCelsius }}º / {{currentForecast.low | convertToCelsius}}º - Sensação térmica, {{heatIndex}}º </h5>
  	</div> 
 
- 	<div class="row text-center">
+ 	<div class="row text-center cicle-button centralizeContent">
  		<button ng-click="showNextForecasts = false">Hoje</button>
- 		<button ng-click="showNextForecasts = true">Próximas</button>
+ 		<button ng-click="showNextForecasts = true" class="active">Dias</button>
  	</div>
 
  	<div name="currentForecastDetails" ng-show="!showNextForecasts"> 
