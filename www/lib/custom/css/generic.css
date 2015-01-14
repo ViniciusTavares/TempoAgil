@@ -3,9 +3,8 @@ body { color: #fff; }
 
 h1, h2, h3, h4, h5 { color: #fff;font-family: 'Fjalla One', sans-serif; }
 
-h2 { font-size: 30px; }
 
-h2 { font-size: 50px; }
+.cicle-button { width: 60%; }
 
 .thunderstorms,
 .sunny,
@@ -17,8 +16,6 @@ h2 { font-size: 50px; }
 
 	display: inline-block;
 }
-
-
 
 .thunderstorms { background: url(); }
 
@@ -36,14 +33,37 @@ h2 { font-size: 50px; }
 	background-size: cover;
 }
 
-.padding { padding: 35px 10px; }
+.padding {
+	padding: 35px 10px;
+	position: relative;
+}
+
 /*inputs */
 
 /*buttons*/
+.cicle-button button {
+	width: 80px;height: 80px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	border: 0 none;
+	
+}
+
+button.active {
+	color: #fff;
+	-webkit-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
+	position: absolute;right: 90px;
+	z-index: 2;
+	background-color: #007FFF;
+}
 
 /*paddings*/
 
 /*margins*/
+.margin-bottom-50 { margin-bottom: 50px !important; }
 
 /*align*/
 .centralizeContent { 
