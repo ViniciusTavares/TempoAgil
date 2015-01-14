@@ -1,0 +1,13 @@
+.current-forecast-box {
+	width: 96%;
+	padding: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	-webkit-box-shadow: 6px 6px 26px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 6px 6px 26px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 6px 6px 26px 0px rgba(50, 50, 50, 0.75);
+
+	background-color: rgba(0, 0, 0, 0.3);
+}
