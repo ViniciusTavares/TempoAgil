@@ -54,6 +54,9 @@ app.filter('translateDayCondition', function() {
 				case('partly cloudy'):
 				return 'Céu limpo'
 				break;
+				case('mostly cloudy'):
+				return 'Parcialmente Nublado'
+				break; 
 			}
 		}
 

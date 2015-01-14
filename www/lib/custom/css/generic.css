@@ -1,5 +1,8 @@
 /*Default styles*/
-body { color: #fff; }
+body { 
+	color: #fff;
+	font-family: HelveticaNeue-Light,"Helvetica Neue",HelveticaNeue,helvetica,arial,sans-serif;	
+	}
 
 h1, h2, h3, h4, h5 { color: #fff;font-family: 'Fjalla One', sans-serif; }
 
@@ -14,11 +17,8 @@ h2 { font-size: 50px; }
 .partly-cloudy {
 	text-indent: -9999px;
 	width: 48px;height: 48px;
-
 	display: inline-block;
 }
-
-
 
 .thunderstorms { background: url(); }
 
@@ -37,6 +37,7 @@ h2 { font-size: 50px; }
 }
 
 .padding { padding: 35px 10px; }
+
 /*inputs */
 
 /*buttons*/
