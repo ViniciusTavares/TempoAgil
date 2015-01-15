@@ -1,39 +1,38 @@
+/*Override ionic styles*/
+.pane, .view {
+	background: url(../img/bg-sun.png);
+	background-size: cover;
+}
+
 /*Default styles*/
 body { 
 	color: #fff;
 	font-family: HelveticaNeue-Light,"Helvetica Neue",HelveticaNeue,helvetica,arial,sans-serif;	
-	}
+}
 
 h1, h2, h3, h4, h5 { color: #fff;font-family: 'Fjalla One', sans-serif; }
 
+p:first-child { margin-bottom: 5px; }
 
 .cicle-button { width: 60%; }
 
-.thunderstorms,
-.sunny,
-.thunderstorms-am,
-.thunderstorm-pm,
+.thunderstorms, .sunny,
+.thunderstorms-am, .thunderstorm-pm,
 .partly-cloudy {
 	text-indent: -9999px;
 	width: 48px;height: 48px;
 	display: inline-block;
 }
 
-.thunderstorms { background: url(); }
+.thunderstorms { background: url(../img/icons/thunderstorms.gif) center center;background-size: cover; }
 
-.sunny { background: url(../imgs/sunny.png); }
+.sunny { background: url(../img/icons/sunny.gif) center center;background-size: cover; }
 
-.thunderstorms-am { background: url(); }
+.thunderstorms-am { background: url(../img/icons/thunderstorms-early.gif) center center;background-size: cover; }
 
-.thunderstorm-pm { background: url(); }
+.thunderstorm-pm { background: url(../img/icons/pm-thunderstorms.gif) center center;background-size: cover; }
 
-.partly-cloudy { background: url(); }
-
-/*Override ionic styles*/
-.pane, .view {
-	background: url(../imgs/bg-sun.png);
-	background-size: cover;
-}
+.partly-cloudy { background: url(../img/icons/cloudy.gif) center center;background-size: cover; }
 
 .padding {
 	padding: 35px 10px;
@@ -48,6 +47,7 @@ h1, h2, h3, h4, h5 { color: #fff;font-family: 'Fjalla One', sans-serif; }
 	-moz-border-radius: 100px;
 	border-radius: 100px;
 	border: 0 none;
+	margin-right: -10px; 
 	
 }
 
@@ -56,15 +56,14 @@ button.active {
 	-webkit-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
 	-moz-box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
 	box-shadow: 4px 4px 17px 0px rgba(50, 50, 50, 0.75);
-	/*position: absolute;right: 90px;*/
-	z-index: 2;
+	z-index: 5;
 	background-color: #007FFF;
 }
 
 /*paddings*/
 
 /*margins*/
-.margin-bottom-50 { margin-bottom: 50px !important; }
+.margin-bottom { margin-bottom: 20% !important; }
 
 /*align*/
 .centralizeContent { 
@@ -83,7 +82,6 @@ button.active {
 .pull-right {
 	float: right: ;
 };
-
 
 /*sizes*/
 .font-size-small { 
