@@ -1,7 +1,7 @@
 ﻿(function () {
-    'use strict';
+  'use strict';
 
-    var app = angular.module('app', [
+  var app = angular.module('app', [
         // Angular modules 
         'ngAnimate',
         'ngSanitize',
@@ -10,25 +10,34 @@
         'common'
         ]);
 
-    app.run(['$rootScope', '$route', '$location', '$ionicPlatform',
-        function ($rootScope, $route, $location, $ionicPlatform) {
+  app.run(['$rootScope', '$route', '$location', '$ionicPlatform', '$ionicLoading',
+    function ($rootScope, $route, $location, $ionicPlatform, $ionicLoading) {
 
-            $rootScope["serverAddress"] = "http://localhost:5000/"
+      $rootScope["serverAddress"] = "http://localhost:5000/"
 
-            $rootScope.$on("$locationChangeStart", function (event) {
+      $rootScope.$on("$locationChangeStart", function (event) {
 
-             $ionicPlatform.ready(function() {
+       $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-             if(window.cordova && window.cordova.plugins.Keyboard) {
-              cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-          }
-          
-          if(window.StatusBar) {
-              StatusBar.styleDefault();
-          }
+       if(window.cordova && window.cordova.plugins.Keyboard) {
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      }
+
+      if(window.StatusBar) {
+        StatusBar.styleDefault();
+      }
+    });
+
+       $rootScope.$on('loading:show', function() {
+        $ionicLoading.show({template: 'loading'})
       });
 
-         });
-        }]);
+       $rootScope.$on('loading:hide', function() {
+        $ionicLoading.hide()
+      });
+
+
+     });
+    }]);
 })();
