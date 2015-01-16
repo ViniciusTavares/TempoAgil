@@ -10,6 +10,15 @@ body {
 	font-family: HelveticaNeue-Light,"Helvetica Neue",HelveticaNeue,helvetica,arial,sans-serif;	
 }
 
+a:link {
+    color: #ffffff;
+}
+
+/* visited link */
+a:visited {
+    color: #ffffff;
+}
+
 h1, h2, h3, h4, h5 { color: #fff;font-family: 'Fjalla One', sans-serif; }
 
 p:first-child { margin-bottom: 5px; }
@@ -38,6 +47,7 @@ p:first-child { margin-bottom: 5px; }
 	padding: 35px 10px;
 	position: relative;
 }
+
 /*inputs */
 
 /*buttons*/
@@ -47,8 +57,7 @@ p:first-child { margin-bottom: 5px; }
 	-moz-border-radius: 100px;
 	border-radius: 100px;
 	border: 0 none;
-	margin-right: -10px; 
-	
+	margin-right: -10px; 	
 }
 
 button.active {
@@ -61,6 +70,14 @@ button.active {
 }
 
 /*paddings*/
+.padding-right-10 { 
+	padding-right: 10px;
+}
+
+.padding-left-10 { 
+	padding-left: 10px;
+}
+
 
 /*margins*/
 .margin-bottom { margin-bottom: 20% !important; }
@@ -80,8 +97,12 @@ button.active {
 }
 
 .pull-right {
-	float: right: ;
-};
+	float: right;
+}
+
+.flex-direction-reverse { 
+	flex-direction: row-reverse;
+}
 
 /*sizes*/
 .font-size-small { 

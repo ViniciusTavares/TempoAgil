@@ -51,6 +51,12 @@ app.filter('translateDayCondition', function() {
 				break;
 				case('pm thunderstorms'): 
 				return 'Trovoadas a Noite'
+				case('thunder'): 
+				return 'Trovoadas';  
+				break;
+				case('scattered thunderstorms'): 
+				return 'Pouco nublado';  
+				break;
 				case('partly cloudy'):
 				return 'Céu limpo'
 				break;
@@ -88,6 +94,12 @@ app.filter('getClassIconOfDayCondition', function() {
 				break;
 				case('pm thunderstorms'): 
 				return 'thunderstorm-pm'
+				case('thunder'): 
+				return 'thunderstorm';  
+				break;
+				case('scattered thunderstorms'): 
+				return '';  
+				break;
 				case('partly cloudy'):
 				return 'partly-cloudy'
 				break;

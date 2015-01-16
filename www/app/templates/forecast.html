@@ -1,0 +1,74 @@
+ <ion-view title="Previsão do tempo">
+ <ion-content padding="true">
+
+ <section name="forecast" on-swipe-down="updateBinding()" class="">  
+
+ 	<header class="row flex-direction-reverse">
+ 		<a ui-sref="about">
+ 			<i class="icon ion-plus" data-pack="default" data-tags="add, include, new, invite, +">
+
+ 			</i>
+ 		</a>
+ 		<i ng-click="showFavoriteList = true" class="icon padding-right-10 ion-navicon-round" data-pack="default" data-tags="add, include, new, invite, +"></i>
+ 	</header>
+
+ 	<div class="seeFavoriteList" ng-show="showFavoriteList">
+		<ul>
+			<li>Teste</li>
+			<li>Teste</li>
+			<li>Teste</li>
+			<li>Teste</li>
+		</ul>
+ 	</div>
+
+ 	<div class="seeForecast" ng-show="!showFavoriteList">
+ 		<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box margin-bottom">
+ 			<h1>São Paulo</h1>
+
+ 			<h2>{{currentForecast.temp}}º C</h2>
+
+ 			<h4>{{currentForecast.condition | translateDayCondition}}</h4>
+
+ 			<h5> {{currentForecast.high | convertToCelsius }}º / {{currentForecast.low | convertToCelsius}}º - Sensação térmica, {{heatIndex}}º </h5>
+ 		</div> 
+
+ 		<div class="row text-center cicle-button centralizeContent">
+ 			<button ng-class="{active: !showNextForecasts}" ng-click="showNextForecasts = false">Hoje</button>
+ 			<button ng-class="{active: showNextForecasts}"  ng-click="showNextForecasts = true">Dias</button>
+ 		</div>
+
+ 		<div name="currentForecastDetails" ng-show="!showNextForecasts"> 
+ 			<div class="row text-center ">
+ 				<div class="col-50">
+ 					<span>Manhã</span>
+ 				</div>
+ 				<div class="col-50">
+ 					<span>Noite</span>
+ 				</div>
+ 			</div>
+ 			<div class="row text-center">
+ 				<div class="col-50">
+ 					<span>{{currentForecast.high | convertToCelsius}}º</span>
+ 				</div>
+ 				<div class="col-50">
+ 					<span>{{currentForecast.low | convertToCelsius}}º</span>
+ 				</div>
+ 			</div>
+ 		</div>
+
+
+ 		<div class="row text-center" ng-show="showNextForecasts">
+ 			<div class="col-25" ng-repeat="forecast in forecasts">  		
+
+ 				<p>{{forecast.date }} {{forecast.day | translateDayName}}</p>
+ 				<p class="{{forecast.text | getClassIconOfDayCondition}}"></p>
+ 				<p>{{forecast.high | convertToCelsius}}º | {{forecast.low | convertToCelsius}}º</p> 
+ 			</div>
+ 		</div>
+ 	</div>
+ </section>
+
+</ion-content>
+
+</ion-view>
+

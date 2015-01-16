@@ -17,6 +17,9 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet" />
     <link href="lib/custom/css/generic.css" rel="stylesheet" />
     <link href="lib/custom/css/home.css" rel="stylesheet" />
+    <link href="app/directives/ion-google-place/ion-google-place.css" rel="stylesheet" />
+
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
       <link href="css/ionic.app.css" rel="stylesheet">
   -->
@@ -24,19 +27,8 @@
 </head>
 <body ng-app="app" animation="slide-left-right-ios7">
 
-    <!-- <ion-nav-bar class="bar-dark"></ion-nav-bar> -->
+<div ng-include="'app/shared/shell.html'"></div>
 
-<ion-nav-view name="home"></ion-nav-view>
-
-<!-- <ion-tabs class="tabs-positive">
-<ion-tab icon="ion-home" ui-sref="home">
-
-</ion-tab>
-<ion-tab icon="ion-information-circled" ui-sref="about">
-<ion-nav-view name="about"></ion-nav-view>
-</ion-tab>
-</ion-tabs>
- -->
 <script src="lib/jquery/jquery-2.1.1.min.js"></script>
 <script src="lib/modernizr/modernizr-latest.js"></script>
 <script src="lib/toastr/toastr.min.js"></script>
@@ -54,12 +46,15 @@
 <script src="app/filters/forecastFilter.js"></script>
 
 <!-- controllers -->
+<script src="app/shared/shell.js"></script>
 <script src="app/controllers/sideMenuController.js"></script>
-<script src="app/controllers/weatherIndexController.js"></script>
+<script src="app/controllers/forecastController.js"></script>
 <script src="app/controllers/aboutController.js"></script>
 
 <!-- services -->
 <script src="app/services/weatherService.js"></script>
+
+<script src="app/directives/ion-google-place/ion-google-place.js"></script>
 
 <!-- cordova script (this will be a 404 during development) -->
 <script src="cordova.js"></script>

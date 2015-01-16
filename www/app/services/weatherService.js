@@ -10,7 +10,7 @@ function weatherService($http, $q) {
 		getCurrentWeather : getCurrentWeather 
 	}
 
-	function getCurrentWeather() {
+	function getCurrentWeather(location) {
 
 		var url = 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22s%C3%A3o%20paulo%2C%20sp%22)&format=json';
 

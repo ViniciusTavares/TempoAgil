@@ -1,9 +1,15 @@
-﻿<section>
-    <div data-ng-include="'app/shared/header/header.html'"></div>
-    
-    <div ng-view="" style="margin-top: 80px">
+﻿
+<div ng-controller="shell"> 
 
-    </div>
+<ion-nav-view name="forecast"></ion-nav-view>
 
-    <!--<div data-ng-include="'/app/layout/footer.html'"></div>-->
-</section>
+<!-- <ion-tabs class="tabs-positive">
+<ion-tab icon="ion-home" ui-sref="home">
+
+</ion-tab>
+<ion-tab icon="ion-information-circled" ui-sref="about">
+<ion-nav-view name="about"></ion-nav-view>
+</ion-tab>
+</ion-tabs>
+-->
+</div>

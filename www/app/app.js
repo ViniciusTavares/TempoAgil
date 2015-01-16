@@ -7,6 +7,7 @@
         'ngSanitize',
         'ngRoute',
         'ionic',
+        'ion-google-place',
         'common'
         ]);
 
@@ -21,13 +22,11 @@
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
        if(window.cordova && window.cordova.plugins.Keyboard) {
-        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      }
+        cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);  }
 
-      if(window.StatusBar) {
-        StatusBar.styleDefault();
-      }
-    });
+        if(window.StatusBar) {
+          StatusBar.styleDefault();
+        }  });
 
        $rootScope.$on('loading:show', function() {
         $ionicLoading.show({

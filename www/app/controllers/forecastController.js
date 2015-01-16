@@ -1,16 +1,18 @@
 (function () {
-	var controllerId = 'weatherIndexController';
+	var controllerId = 'forecastController';
 
-	angular.module('app').controller(controllerId, ['$scope', 'common', 'translatorService', 'weatherService', weatherIndexController]);
+	angular.module('app').controller(controllerId, ['$scope', 'common',  '$state', 'translatorService', 'weatherService', forecastController]);
 
-	function weatherIndexController($scope, common, translatorService, weatherService) { 
+	function forecastController($scope, common, $state, translatorService, weatherService) { 
 		var vm = this;
 
 		$scope.updateBinding = function() {
 			weatherService.getCurrentWeather().then(function(response){ 
 
+				// $state.go('about');
+				$scope.showFavoriteList = false; 
 				$scope.forecasts = response.data.query.results.channel.item.forecast; 
-				$scope.forecasts.splice(0, 1);
+				$scope.forecasts.splice(0, 1);	
 
 				$scope.currentForecast = $scope.forecasts[0];
 

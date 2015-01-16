@@ -7,18 +7,28 @@
 
     function routeConfigurator($routeProvider, $stateProvider, $urlRouterProvider) {
 
-        $stateProvider
-
-        $stateProvider.state('home', {
+        $stateProvider.state('forecast', {
             url: '/',
             views: {
-                home: {
-                    templateUrl: 'app/templates/home.html',
-                    controller: 'weatherIndexController'
+                forecast: {
+                    templateUrl: 'app/templates/forecast.html',
+                    controller: 'forecastController'
                 }
             }
           
         })
+
+        .state('addANewCity', {
+            url: '/addANewCity',
+            views: {
+                addANewCity: {
+                    templateUrl: 'app/templates/forecast.html',
+                    controller: 'addANewCityController'           
+                }
+            }
+        })
+
+
 
         $stateProvider.state('about', {
             url: '/about',

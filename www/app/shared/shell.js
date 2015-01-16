@@ -5,6 +5,6 @@
     angular.module('app').controller(controllerId, ['$rootScope', shell]);
 
     function shell($rootScope) {
-        
+     
     };
 })();
