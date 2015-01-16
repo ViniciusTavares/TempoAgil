@@ -1,7 +1,7 @@
  <ion-view title="Home">
  <ion-content padding="true">
 
- <section name="weatherIndexContent" class="">  
+ <section name="weatherIndexContent" on-swipe-down="updateBinding()" class="">  
 
  	<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box margin-bottom">
  		<h1>São Paulo</h1>
@@ -16,7 +16,7 @@
 
  	<div class="row text-center cicle-button centralizeContent">
  		<button ng-class="{active: !showNextForecasts}" ng-click="showNextForecasts = false">Hoje</button>
- 		<button ng-class="{active: showNextForecasts}" ng-click="showNextForecasts = true">Dias</button>
+ 		<button ng-class="{active: showNextForecasts}"  ng-click="showNextForecasts = true">Dias</button>
  	</div>
 
  	<div name="currentForecastDetails" ng-show="!showNextForecasts"> 

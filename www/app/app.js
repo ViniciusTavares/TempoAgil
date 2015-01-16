@@ -30,14 +30,24 @@
     });
 
        $rootScope.$on('loading:show', function() {
-        $ionicLoading.show({template: 'loading'})
+        $ionicLoading.show({
+         content: 'Carregando',
+         animation: 'fade-in',
+         showBackdrop: false,
+         maxWidth: 200,
+         // showDelay: 500
+       })
       });
 
-       $rootScope.$on('loading:hide', function() {
+      //   $rootScope.$on('loading:show', function() {
+      //   $ionicLoading.show({template: 'loading'})
+      // });
+
+      $rootScope.$on('loading:hide', function() {
         $ionicLoading.hide()
       });
 
 
-     });
+    });
     }]);
 })();
