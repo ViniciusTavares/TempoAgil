@@ -44,7 +44,7 @@ p:first-child { margin-bottom: 5px; }
 .partly-cloudy { background: url(../img/icons/cloudy.gif) center center;background-size: cover; }
 
 .padding {
-	padding: 35px 10px;
+	padding: 10px 10px;
 	position: relative;
 }
 
@@ -80,7 +80,7 @@ button.active {
 
 
 /*margins*/
-.margin-bottom { margin-bottom: 20% !important; }
+.margin-bottom { margin-bottom: 15% !important; }
 
 /*align*/
 .centralizeContent { 
