@@ -1,8 +1,7 @@
 ﻿
 <div ng-controller="shell"> 
 
-<ion-nav-view name="forecast"></ion-nav-view>
-
+	
 <!-- <ion-tabs class="tabs-positive">
 <ion-tab icon="ion-home" ui-sref="home">
 
@@ -12,4 +11,24 @@
 </ion-tab>
 </ion-tabs>
 -->
-</div>
+
+
+<ion-tabs class="tabs-positive tabs-icon-only">
+
+<ion-tab title="Home" icon-on="ion-ios7-filing" ui-sref="forecast" icon-off="ion-ios7-filing-outline">
+<!-- Tab 1 content -->
+<ion-nav-view name="forecast"></ion-nav-view>
+
+</ion-tab>
+
+<ion-tab title="About" icon-on="ion-ios7-clock" ui-sref="addANewCity" icon-off="ion-ios7-clock-outline">
+
+<ion-nav-view name="addANewCity"></ion-nav-view>
+
+</ion-tab>
+
+<ion-tab icon="ion-information-circled" ui-sref="about">
+<ion-nav-view name="about"></ion-nav-view>
+</ion-tab>
+</ion-tabs>
+</div
