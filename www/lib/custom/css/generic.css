@@ -1,6 +1,6 @@
 /*Override ionic styles*/
 .pane, .view {
-	background: url(../img/bg-sun.png);
+	background: url(../img/pouco-nublado.png);
 	background-size: cover;
 }
 

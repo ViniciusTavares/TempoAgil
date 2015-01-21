@@ -38,7 +38,7 @@
 	 			<button ng-class="{active: showNextForecasts}"  ng-click="showNextForecasts = true">Dias</button>
 	 		</div>
 
-	 		<div name="currentForecastDetails" ng-show="!showNextForecasts"> 
+	 		<div class="style-font" name="currentForecastDetails" ng-show="!showNextForecasts"> 
 	 			<div class="row text-center ">
 	 				<div class="col-50">
 	 					<span>Manhã</span>
@@ -57,7 +57,7 @@
 	 			</div>
 	 		</div>
 
-			<div class="row text-center" ng-show="showNextForecasts">
+			<div class="row text-center style-font" ng-show="showNextForecasts">
 	 			<div class="col-25" ng-repeat="forecast in forecasts">  		
 	 				<p>{{forecast.date }} {{forecast.day | translateDayName}}</p>
 	 				<p class="{{forecast.text | getClassIconOfDayCondition}}"></p>
