@@ -1,6 +1,6 @@
 /*Override ionic styles*/
 .pane, .view {
-	background: url(../img/pouco-nublado.png);
+	background: url(../img/ensolarado.png);
 	background-size: cover;
 }
 
@@ -57,7 +57,8 @@ p:first-child { margin-bottom: 5px; }
 	-moz-border-radius: 100px;
 	border-radius: 100px;
 	border: 0 none;
-	margin-right: -10px; 	
+	margin-right: -10px;
+	margin: 0 auto	
 }
 
 button.active {
@@ -107,4 +108,10 @@ button.active {
 /*sizes*/
 .font-size-small { 
 	font-size: 11px;
+}
+
+@media screen and (max-width: 320px) {
+	.cicle-button button {
+		height: 60px;width: 60px;
+	}
 }
