@@ -29,7 +29,7 @@ p:first-child { margin-bottom: 5px; }
 .thunderstorms-am, .thunderstorm-pm,
 .partly-cloudy {
 	text-indent: -9999px;
-	width: 48px;height: 48px;
+	width: 25px;height: 25px;
 	display: inline-block;
 }
 
@@ -80,7 +80,7 @@ button.active {
 
 
 /*margins*/
-.margin-bottom { margin-bottom: 15% !important; }
+.margin-bottom { margin-bottom: 5% !important; }
 
 /*align*/
 .centralizeContent { 
