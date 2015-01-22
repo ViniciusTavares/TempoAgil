@@ -4,21 +4,16 @@
  <section name="forecast" on-swipe-down="updateBinding()" class="">  
 
  	<header class="row flex-direction-reverse">
- 		<a ui-sref="about">
- 			<i class="icon ion-plus" data-pack="default" data-tags="add, include, new, invite, +">
-
- 			</i>
- 		</a>
  		<i ng-click="showFavoriteList = true" class="icon padding-right-10 ion-navicon-round" data-pack="default" data-tags="add, include, new, invite, +"></i>
  	</header>
 
- 	<div class="seeFavoriteList" ng-show="showFavoriteList">
-		<ul>
+ 	<div class="seeFavoriteList" ng-repeat="f as savedForecasts" ng-show="showFavoriteList">
+		<!-- <ul>
 			<li>Teste</li>
 			<li>Teste</li>
 			<li>Teste</li>
 			<li>Teste</li>
-		</ul>
+		</ul> -->
  	</div>
 
  	<div class="seeForecast" ng-show="!showFavoriteList">

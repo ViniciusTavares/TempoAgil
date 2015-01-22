@@ -66,6 +66,9 @@ app.filter('translateDayCondition', function() {
 				case('light rain with thunder'): 
 				return 'Garoa com chuva'
 				break;
+				case('light rain'): 
+				return 'Garoando'
+				break;
 			}
 		}
 
@@ -105,6 +108,9 @@ app.filter('getClassIconOfDayCondition', function() {
 				break;
 				case('light rain with thunder'): 
 				return 'rain-with-thunder'
+				break;
+				case('light rain'): 
+				return 'light-rain'
 				break;
 			}
 		}
