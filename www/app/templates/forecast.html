@@ -7,15 +7,15 @@
  		<i ng-click="showFavoriteList = true" class="icon padding-right-10 ion-navicon-round" data-pack="default" data-tags="add, include, new, invite, +"></i>
  	</header>
 
- 	<div class="seeFavoriteList" ng-repeat="f as savedForecasts" ng-show="showFavoriteList">
-		<!-- <ul>
+ 	<!-- <div class="seeFavoriteList" ng-repeat="f as savedForecasts" ng-show="showFavoriteList">
+		<ul>
 			<li>Teste</li>
 			<li>Teste</li>
 			<li>Teste</li>
 			<li>Teste</li>
-		</ul> -->
+		</ul>
  	</div>
-
+ -->
  	<div class="seeForecast" ng-show="!showFavoriteList">
  		<div name="currentForecastMain" class="text-center centralizeContent current-forecast-box margin-bottom">
  			<h1>São Paulo</h1>
@@ -59,6 +59,8 @@
 	 				<p>{{forecast.high | convertToCelsius}}º | {{forecast.low | convertToCelsius}}º</p> 
 	 			</div>
 	 		</div>
+
+	 		
 	 	</div>	
  	</div>
  </section>

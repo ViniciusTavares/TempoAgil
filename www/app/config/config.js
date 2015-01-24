@@ -3,10 +3,12 @@
 
     var app = angular.module('app');
 
-    app.config(['$httpProvider', function ($httpProvider) {
+    app.config(['$httpProvider', '$ionicConfigProvider', function ($httpProvider, $ionicConfigProvider) {
         // $httpProvider.defaults.useXDomain = true;
         // delete $httpProvider.defaults.headers.common['X-Requested-With'];
         // $httpProvider.defaults.withCredentials = true;
+
+        $ionicConfigProvider.tabs.position('bottom');
 
         $httpProvider.interceptors.push(function($rootScope) {
             return {
