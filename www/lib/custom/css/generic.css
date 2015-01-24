@@ -1,6 +1,6 @@
 /*Override ionic styles*/
 .pane, .view {
-	background: url(../img/ensolarado.png);
+	background: url(../img/chuva.png);
 	background-size: cover;
 }
 
@@ -57,8 +57,7 @@ p:first-child { margin-bottom: 5px; }
 	-moz-border-radius: 100px;
 	border-radius: 100px;
 	border: 0 none;
-	margin-right: -10px;
-	margin: 0 auto	
+	margin-right: -10px;	
 }
 
 button.active {
