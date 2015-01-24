@@ -1,6 +1,6 @@
 /*Override ionic styles*/
 .pane, .view {
-	background: url(../img/chuva.png);
+	background: url(../img/trovoadas2.jpg);
 	background-size: cover;
 }
 
@@ -109,8 +109,9 @@ button.active {
 	font-size: 11px;
 }
 
-@media screen and (max-width: 320px) {
-	.cicle-button button {
-		height: 60px;width: 60px;
+/* Large desktop - max-width & max-height */
+@media screen and (min-width: 330px) and (max-width: 1680px) {
+	.cicle-button {
+		width: 15% !important;
 	}
 }
